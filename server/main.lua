@@ -15,7 +15,7 @@ AddEventHandler("qb-burgershot:bill:player", function(playerId, amount)
                             ['sender'] = biller.PlayerData.charinfo.firstname
                         })
                         else
-                          exports.ghmattimysql:execute('INSERT INTO phone_invoices (citizenid, amount, society, sender) VALUES (@citizenid, @amount, @society, @sender)', {
+                          exports.oxmysql:execute('INSERT INTO phone_invoices (citizenid, amount, society, sender) VALUES (@citizenid, @amount, @society, @sender)', {
                             ['@citizenid'] = billed.PlayerData.citizenid,
                             ['@amount'] = amount,
                             ['@society'] = biller.PlayerData.job.name,
